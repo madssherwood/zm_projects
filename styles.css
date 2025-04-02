@@ -6,6 +6,10 @@
     font-family: 'Futura PT', sans-serif !important;
 }
 
+.leaflet-container img.leaflet-tile {
+    mix-blend-mode: hue;
+}
+
 .layer-toggle {
     position: absolute;
     top: 10px;
