@@ -23,7 +23,7 @@ window.onload = async () => {
                 tile.style.height = tileSize.y + 1 + 'px';
             }
         });
-        
+
         let currentLayer = baseLayers["Vector"];
         currentLayer.addTo(map);
 
