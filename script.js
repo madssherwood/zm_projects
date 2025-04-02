@@ -14,6 +14,16 @@ window.onload = async () => {
             })
         };
 
+        var originalInitTile = L.GridLayer.prototype._initTile;
+        L.GridLayer.include({
+            _initTile: function (tile) {
+                originalInitTile.call(this, tile);
+                var tileSize = this.getTileSize();
+                tile.style.width = tileSize.x + 1 + 'px';
+                tile.style.height = tileSize.y + 1 + 'px';
+            }
+        });
+        
         let currentLayer = baseLayers["Vector"];
         currentLayer.addTo(map);
 
