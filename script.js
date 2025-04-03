@@ -1,5 +1,5 @@
 window.onload = async () => {
-        const map = L.map("map").setView([20, 0], 3);
+        const map = L.map("map").setView([20, 0], 2);
         
         map.setMaxBounds(map.getBounds());
     
