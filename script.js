@@ -1,15 +1,17 @@
 window.onload = async () => {
-        const map = L.map("map").setView([20, 0], 2);
-
+        const map = L.map("map").setView([20, 0], 3);
+        
+        map.setMaxBounds(map.getBounds());
+    
         const baseLayers = {
             "Vector": L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
                 attribution: "OpenStreetMap & CARTO",
-                maxZoom: 14,
+                maxZoom: 10,
                 minZoom: 2
             }),
             "Satellite": L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
                 attribution: "Powered by Esri & Maxar",
-                maxZoom: 14,
+                maxZoom: 10,
                 minZoom: 2
             })
         };
