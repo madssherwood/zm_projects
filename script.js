@@ -1,8 +1,6 @@
 window.onload = async () => {
         const map = L.map("map").setView([20, 0], 2);
-        
-        map.setMaxBounds(map.getBounds());
-    
+           
         const baseLayers = {
             "Vector": L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
                 attribution: "OpenStreetMap & CARTO",
