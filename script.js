@@ -83,7 +83,7 @@ window.onload = async () => {
                     if (feature.properties) {
                         const name = lang === "sv" ? feature.properties.name_sv : feature.properties.name_en;
                         const description = lang === "sv" ? feature.properties.description_sv : feature.properties.description_en;
-                        layer.bindPopup(`<div class="customPopup"><a href=${feature.properties.link}><b>${name}</b></a><br>${description}</div>`);
+                        layer.bindPopup(`<div class="customPopup"><a href=${feature.properties.link} target="_blank"><b>${name}</b></a><br>${description}</div>`);
                     }
                 }
             }).addTo(map);
