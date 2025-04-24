@@ -3,12 +3,12 @@ window.onload = async () => {
            
         const baseLayers = {
             "Vector": L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-                attribution: "OpenStreetMap & CARTO",
+                attribution: '<a href="https://openstreetmap.org">Open Street Map</a> contributors & <a href="https://carto.com">CARTO</a>',
                 maxZoom: 10,
                 minZoom: 2
             }),
             "Satellite": L.tileLayer("https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}", {
-                attribution: "Powered by Esri & Maxar",
+                attribution: 'Powered by <a href="https://esri.com">Esri</a> & Maxar',
                 maxZoom: 10,
                 minZoom: 2
             })
@@ -52,7 +52,7 @@ window.onload = async () => {
         };
 
         try {
-            const response = await fetch("leaflet_projekt.csv");
+            const response = await fetch("https://docs.google.com/spreadsheets/d/e/2PACX-1vRRsHUvw--BsVFBa-DuEDmfuVxq8W_h9Q-FbK-DcCYcq6544MMdkMcLegh5xFpUV5xt_wDijSCrqN4f/pub?output=csv");
             if (!response.ok) throw new Error("Failed to load CSV");
 
             const csvData = await response.text();
